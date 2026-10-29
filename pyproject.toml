@@ -1,0 +1,27 @@
+[project]
+name = "project-observant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "johngabrielg", email = "johngabrielc.gregorio@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.0",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2,<3",
+    "pytest>=9.1.1",
+    "python-dotenv>=1.2.3",
+    "sqlalchemy>=2.0.54",
+]
+
+[project.scripts]
+project-observant = "project_observant:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
